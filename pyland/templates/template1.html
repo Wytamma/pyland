@@ -1,0 +1,20 @@
+{% extends "templates/base.html" %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block body %}
+<body class="bg-blue-400 text-white" style="font-family: 'Source Sans Pro', sans-serif">
+    <div>
+        <h1 class="uppercase text-2xl p-4">{{ title }}</h1>
+    </div>
+    <div class="flex flex-col items-center mt-6">
+        <div class="flex justify-center pb-4">
+            <img src="./apple-icon-180x180.png" alt="ico">
+        </div>
+        <p>{{ description }}</p>
+    </div>
+</body>
+{% endblock %}

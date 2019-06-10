@@ -1,5 +1,9 @@
-from python_starter import code
+from click.testing import CliRunner
+from hello import hello
 
 
-def test_add():
-    assert code.add(3, 5) == 8
+def test_hello_world():
+    runner = CliRunner()
+    result = runner.invoke(hello, ["Peter"])
+    assert result.exit_code == 0
+    assert result.output == "Hello Peter!\n"
