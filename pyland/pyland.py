@@ -56,9 +56,6 @@ def _generate_icons(image_path, outputfolder="."):
     resized_img = img.resize((192, 192), Image.ANTIALIAS)
     click.echo("apple-icon.png")
     resized_img.save(f"{outputfolder}/apple-icon.png", format="PNG")
-    # files
-    with open("Failed.py", "w") as file:
-        file.write("whatever")
 
 
 @click.group()
